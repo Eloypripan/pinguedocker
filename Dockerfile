@@ -9,8 +9,9 @@ RUN apt-get -y upgrade
 RUN apt-get -y install git python3 python3-pip screen
 RUN git clone https://github.com/eternnoir/pyTelegramBotAPI
 RUN git clone https://github.com/azzorini/pingueinstein
-RUN pushd pyTelegramBotAPI
-RUN python3 setup.py install
+#RUN pushd pyTelegramBotAPI
+RUN python3 ~/pyTelegramBotAPI/setup.py
+#RUN python3 setup.py install
 RUN popd
 RUN pip3 install pillow sympy
 
