@@ -11,9 +11,9 @@ RUN git clone https://github.com/eternnoir/pyTelegramBotAPI
 RUN git clone https://github.com/azzorini/pingueinstein
 #RUN pushd pyTelegramBotAPI
 RUN ls
-RUN python3 /pyTelegramBotAPI/setup.py install
-#RUN cd pyTelegramBotAPI
-#RUN python3 setup.py install
+#RUN python3 /pyTelegramBotAPI/setup.py install
+RUN cd pyTelegramBotAPI
+RUN python3 setup.py install
 RUN popd
 RUN pip3 install pillow sympy
 
@@ -21,5 +21,6 @@ RUN pip3 install pillow sympy
 EXPOSE 25565
 
 #Automatically start 
-CMD bash ~/pingueinstein/PingueReset
+CMD bash PingueReset
+#CMD bash ~/pingueinstein/PingueReset
 
