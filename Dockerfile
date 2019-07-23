@@ -10,6 +10,7 @@ RUN apt-get -y install git python3 python3-pip screen
 RUN git clone https://github.com/eternnoir/pyTelegramBotAPI
 RUN git clone https://github.com/azzorini/pingueinstein
 #RUN pushd pyTelegramBotAPI
+RUN ls
 RUN python3 /pyTelegramBotAPI/setup.py
 #RUN python3 setup.py install
 RUN popd
