@@ -13,6 +13,7 @@ RUN git clone https://github.com/azzorini/pingueinstein
 RUN ls
 #RUN python3 /pyTelegramBotAPI/setup.py install
 RUN cd pyTelegramBotAPI
+RUN ls
 RUN python3 setup.py install
 RUN popd
 RUN pip3 install pillow sympy
