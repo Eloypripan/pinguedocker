@@ -11,12 +11,11 @@ RUN git clone https://github.com/eternnoir/pyTelegramBotAPI
 RUN git clone https://github.com/azzorini/pingueinstein
 #RUN pushd pyTelegramBotAPI
 RUN ls
-#RUN python3 /pyTelegramBotAPI/setup.py install
 RUN cd pyTelegramBotAPI
-RUN ls
 RUN python3 setup.py install
-RUN popd
+RUN cd ..
 RUN pip3 install pillow sympy
+
 
 # Expose the container's network port: 25565 during runtime.
 EXPOSE 25565
